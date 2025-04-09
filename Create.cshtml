@@ -1,0 +1,53 @@
+﻿@model UE_GPA.Models.StudentMark
+
+
+
+<div class="container-form">
+    <h2 class="text-center text-white">Enter Your Marks</h2>
+
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label asp-for="StudentName" class="control-label mb-2"></label>
+            <input asp-for="StudentName" class="form-control" />
+            <span asp-validation-for="StudentName" class="text-danger"></span>
+        </div>
+
+
+        <div>
+            <label class="mb-2 mt-2 form-group">Subject 1</label>
+            <input asp-for="Subject1" class="form-control mb-2" />
+            <input asp-for="Marks1" class="form-control mt-4" placeholder="Marks" />
+        </div>
+
+        <div>
+            <label class="mb-2 mt-2 form-group">Subject 2</label>
+            <input asp-for="Subject2" class="form-control mb-2" />
+            <input asp-for="Marks2" class="form-control mt-4" placeholder="Marks" />
+        </div>
+
+        <div>
+            <label class="mb-2 mt-2 form-group">Subject 3</label>
+            <input asp-for="Subject3" class="form-control mb-2" />
+            <input asp-for="Marks3" class="form-control mt-4" placeholder="Marks" />
+        </div>
+
+        <div>
+            <label class="mb-2 mt-2 form-group">Subject 4</label>
+            <input asp-for="Subject4" class="form-control mb-2" />
+            <input asp-for="Marks4" class="form-control mt-4" placeholder="Marks" />
+        </div>
+
+        <div>
+            <label class="mb-2 mt-2 form-group">Subject 5</label>
+            <input asp-for="Subject5" class="form-control mb-2" />
+            <input asp-for="Marks5" class="form-control mt-4" placeholder="Marks" />
+        </div>
+
+        <button type="submit" class="btn btn-success mt-4">Calculate GPA</button>
+    </form>
+
+
+</div>
